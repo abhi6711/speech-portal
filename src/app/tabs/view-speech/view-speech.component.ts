@@ -1,3 +1,9 @@
+/******************************* Description of Component *********************************
+View speech component interacts with the dataservice and when the page initializes it calls
+dataservice to send the data which user wants to view. If no data is send then it will show 
+error message otherwise it will show the speech data.
+On this page user can edit and delete their speech.
+************************************ END *************************************************/
 /**
  * Import all the angular dependencies here
  */
@@ -84,6 +90,12 @@ export class ViewSpeechComponent implements OnInit {
         return this.speechData;
     }
 
+    /**
+     * This function is trigerred when user clicks the dialog box open after clicking delete button
+     * If user click delete button on dialog box then it deleted the speech data by calling
+     * dtaservice function
+     * @param isSpeechDeleted : boolean variable which cheeck whether to delete the speech or not
+     */
     public submitResponse(isSpeechDeleted: boolean): void {
         if(isSpeechDeleted) {
             this.dataService.updateSpeech(this.speechData, 'delete');

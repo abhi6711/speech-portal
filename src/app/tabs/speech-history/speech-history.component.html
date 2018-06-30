@@ -3,12 +3,12 @@
         <div class="col-md-8">
             <div class='messages'>
                 <span *ngIf='loaded == false' class='loading'>
-
                     <i class="zmdi zmdi-replay zmdi-hc-spin-reverse"></i>&ensp;Loading Table Data
                 </span>
                 <input class="search" type="text" placeholder="Search by Speech Tile, Author Name, Date and Keywords..." (keyup)="onSearch(search.value)">
             </div>
         </div>
+        <!-- Show Iters per page dropdown-->
         <div class="col-md-4">
             <span class="items">
                 <label>Items Per Page</label>
@@ -22,6 +22,7 @@
             </span>
         </div>
     </div>
+    <!-- Render ng2 samrt table-->
     <div class="row">
         <div class="col-md-12">
             <ng2-smart-table [settings]="settings" [source]="source" *ngIf='loaded'></ng2-smart-table>

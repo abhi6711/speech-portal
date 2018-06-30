@@ -1,3 +1,7 @@
+/******************************* Description of Module *********************************
+Routing module render the component according to the routes in the address bar.
+************************************ END *************************************************/
+
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { SubmitSpeechComponent } from './tabs/submit-speech/submit-speech.component';

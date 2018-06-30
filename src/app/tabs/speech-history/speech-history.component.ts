@@ -1,3 +1,9 @@
+/******************************* Description of Component *********************************
+This component will have the table in  which the all the data of the speech submitted by a
+user. In the table we have View/Share button, whenever a button is clicked button component
+is rendered and does the operation required to done on button.
+************************************ END *************************************************/
+
 /**
  * Import all the angular dependencies here
  */
@@ -81,7 +87,7 @@ export class SpeechHistoryComponent implements OnInit {
     }
 
     /** 
-     * ngOnInit gets called whenever the page initializes. it will call a function to get all the 
+     * ngOnInit gets called whenever the page initializes. It call a function to get all the 
      * speech data
     */
     ngOnInit() {

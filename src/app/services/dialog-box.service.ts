@@ -1,3 +1,8 @@
+/******************************* Description of Service *********************************
+Dialog box service open the interacts with the dialogbox component in order to open the
+respective dialog box as when needed.
+************************************ END *************************************************/
+
 import { Injectable, Component, asNativeElements, Inject, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogRef, MatDialogConfig, MAT_DIALOG_DATA } from '@angular/material';
 import { DOCUMENT } from '@angular/platform-browser';

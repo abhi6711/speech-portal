@@ -1,3 +1,7 @@
+/**
+ * Subscriber service is used to change the tab slider.
+ */
+
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 

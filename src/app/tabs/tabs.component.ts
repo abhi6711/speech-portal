@@ -1,3 +1,7 @@
+/******************************* Description of Component *********************************
+Tab component contains all the tabs (Submit speech, view speech and speech history)
+************************************ END *************************************************/
+
 import { Component, OnInit } from '@angular/core';
 import { Subscriber } from '../services/subscriber.service';
 import { Router } from '@angular/router';

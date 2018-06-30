@@ -1,3 +1,9 @@
+
+/******************************* Description of Component *********************************
+Dialog box component open the dialog boxes when it receives an instruction from dialog-box
+service.
+************************************ END *************************************************/
+
 /**
  * Import all the angular depencies here
  */

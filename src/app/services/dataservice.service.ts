@@ -1,5 +1,6 @@
 /**
- * Dataservice is used to share the data between different components
+ * Dataservice is used to share the data between different components.
+ * It performs various operation (Store, Update and Delete) on speech data.
  */
 
 /**
@@ -13,9 +14,8 @@ import * as constant from '../constants';
 export class DataService {
     speechDetailsObject = {};
     showSpeech = false;
-    speechData = [{ 'id': 1, 'speechtitle': 'abhishek', 'speechtext': 'abhcd', 'author': 'gvh', 'keywords': 'ghvvgh', 'date': '26/06/2018' }, 
-                   { 'id': 2, 'speechtitle': 'vrvwre', 'speechtext': 'vetrberb', 'author': 'Dvwvw', 'keywords': 'fwevwe', 'date': '26/06/2018' }, 
-                   { 'id': 3, 'speechtitle': 'vrvwre', 'speechtext': 'vetrberb', 'author': 'Dvwvw', 'keywords': 'fwevwe', 'date': '26/06/2018' }];
+    //mock the speech data
+    speechData = [{ 'id': 1, 'speechtitle': 'Sample Speech', 'speechtext': 'This is my sample speech', 'author': 'Abhishek Sharma', 'keywords': 'sample', 'date': '26/06/2018' }];
     constructor() { }
 
     /**

@@ -1,3 +1,10 @@
+/******************************* Description of Component *********************************
+Submit speech component is rendered when user wants to submit a speech.
+Whenevre a speech is submitted then it's data is send to DataService in the form of array 
+of objects.
+It interacts with dialog box service to open dialog boxes as an when required.
+************************************ END *************************************************/
+
 /**
  * Import all the angular dependencies here
  */
