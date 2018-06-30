@@ -1,6 +1,6 @@
 <div class="container-fluid submit-speech">
     <div class="row">
-        <div class="col-md-12 col-lg-12 col-xs-12">
+        <div class="col-md-12">
             <label for="speechName">Speech Name:</label>
             <mat-form-field class="name-label">
                 <input id="speechName" matInput [(ngModel)]= "speechName" placeholder="Enter Speech Title" required>
@@ -9,24 +9,24 @@
 
     </div>
     <div class="row">
-        <div class="col-md-12 col-lg-12 col-xs-12">
+        <div class="col-md-12">
             <div class="form-group">
                 <textarea class="form-control" id="exampleTextarea" rows="7" [(ngModel)]="speechText" placeholder="Enter your speech here"></textarea>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2 col-lg-2 col-xs-2">
+        <div class="col-md-2">
             <mat-form-field>
                 <input matInput [(ngModel)]= "authorName" placeholder="Author Name" required>
             </mat-form-field>
         </div>
-        <div class="col-md-2 col-lg-2 col-xs-2">
+        <div class="col-md-2">
             <mat-form-field>
                 <input matInput [(ngModel)]= "keyWords" placeholder="Subject Area Keywords" required>
             </mat-form-field>
         </div>
-        <div class="col-md-2 col-lg-2 col-xs-2">
+        <div class="col-md-2">
             <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="date.value" >
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
