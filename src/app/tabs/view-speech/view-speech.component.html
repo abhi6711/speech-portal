@@ -35,14 +35,11 @@
     </div>
     <div class="row">
         <div class="col-md-2">
-            <button id="delete" class="submit-btn" (click)="deleteSpeech()" [disabled]="disabled" data-toggle="modal" data-target="#myModal"> Delete </button>
+            <button id="delete" class="submit-btn" [disabled]="disabled" data-toggle="modal" data-target="#myModal"> Delete </button>
         </div>
         <div class="col-md-2">
             <button id="submit" class="submit-btn" (click)="saveSpeech()" [disabled]="disabled"> Save </button>
         </div>
-        <!-- <div class="col-md-2">
-            <button id="share" class="submit-btn" (click)="shareSpeech()" [disabled]="disabled"> Share </button>
-        </div> -->
     </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">

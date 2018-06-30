@@ -53,6 +53,5 @@ export class DialogBoxService {
     openMsgModal(message: string) {
         this.dialogRef = this.dialog.open(DialogBoxComponent, { data: { message: message, heading: 'Message:', button: 'close' }, disableClose: true });
         this.dialogRef.componentInstance.showMsg = true;
-        console.log('before calling aync function')
     }
 }

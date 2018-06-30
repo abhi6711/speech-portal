@@ -61,11 +61,6 @@ export class ViewSpeechComponent implements OnInit {
         this.speechText = data[constant.SPEECHTEXT];
     }
 
-    public deleteSpeech(): void {
-        // calling dialog box service to open confirmation modal
-        console.log('in view speech ')
-    }
-
     /*
      * This function save the speech and call a function to update the speech details
      * @return void
@@ -90,7 +85,6 @@ export class ViewSpeechComponent implements OnInit {
     }
 
     public submitResponse(isSpeechDeleted: boolean): void {
-        console.log(isSpeechDeleted);
         if(isSpeechDeleted) {
             this.dataService.updateSpeech(this.speechData, 'delete');
         }

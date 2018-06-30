@@ -86,7 +86,6 @@ export class SpeechHistoryComponent implements OnInit {
     */
     public getAllSpeechDetails(): void {
        this.speechData = this.dataService.getSpeechData()
-       console.log(this.speechData)
        this.source = new LocalDataSource(this.speechData);
        this.loaded = true;
     }

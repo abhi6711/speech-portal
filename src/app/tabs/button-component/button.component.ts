@@ -51,7 +51,7 @@ export class ButtonViewComponent {
      * @return void
      */
     public shareSpeech(): void {
-        this.emailBody = 'Here are the detailed description of my speech %20%3A%0D%0A' + 'Title:' + this.rowData.speechtitle + '%20%3A%0D%0A' +
-            'Description: ' + this.rowData.speechtext + '%20%3A%0D%0A' + 'Keywords:' + this.rowData.keywords;
+        this.emailBody = 'Here are the detailed description of my speech %0D%0A' + 'Title:%20' + this.rowData.speechtitle + '%0D%0A' +
+            'Description: %20' + this.rowData.speechtext + '%0D%0A' + 'Keywords:%20' + this.rowData.keywords;
     }
 }
