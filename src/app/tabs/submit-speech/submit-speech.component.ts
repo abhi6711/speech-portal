@@ -53,6 +53,7 @@ export class SubmitSpeechComponent {
 
     /**
      * This function gets called when speech is submitted
+     * @returns void
      */
     public submitSpeech(): void {
         if (this.validateInputFields()) {
@@ -64,7 +65,7 @@ export class SubmitSpeechComponent {
             this.speechData[constant.DATE] = this.date.value;
             this.speechDetails.push(this.speechData)
             this.dataService.sendSpeechData(this.speechDetails)
-            this.dailogService.openConfirmationModal(constant.CONFIRMATIONMSG, constant.BACK, constant.SPEECH_HISTORY)
+            this.dailogService.openConfirmationModal(constant.CONFIRMATIONMSG, constant.BACK, 'Speech-history')
         }
     }
 

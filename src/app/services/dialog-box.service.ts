@@ -35,14 +35,14 @@ export class DialogBoxService {
     }
 
     /**
-     * This function will open a confirmation modal for delete and save a speech
+     * This function will open a confirmation modal for deleting a speech
      * @param successMsg 
      * @param buttonOne
      * @param buttonTwo
      * @returns void
     */
-    openModal(successMsg: string, buttonOne: string, buttonTwo: string): void {
-        this.dialogRef = this.dialog.open(DialogBoxComponent, { data: { paragraph: successMsg, buttonName1: buttonOne, buttonName2: buttonTwo }, disableClose: false });
+    openDeleteModal(successMsg: string, buttonValue: string): void {
+        this.dialogRef = this.dialog.open(DialogBoxComponent, { data: { paragraph: successMsg, buttonName2: buttonValue }, disableClose: false });
         this.dialogRef.componentInstance.showDeleteMsg = true;
     }
 

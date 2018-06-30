@@ -87,6 +87,7 @@ export class ViewSpeechComponent implements OnInit {
     public submitResponse(isSpeechDeleted: boolean): void {
         if(isSpeechDeleted) {
             this.dataService.updateSpeech(this.speechData, 'delete');
+            this.dailogService.openDeleteModal(constant.DELETESPEECHMSG, 'Speech-history');
         }
     }
 }

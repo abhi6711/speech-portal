@@ -18,10 +18,7 @@
 
 <div id="confirm" *ngIf="showDeleteMsg== true">
     <p>{{ data.paragraph }}</p>
-    <button mat-button color="primary" class="close-btn" id="backbtn" (click)="dialogRef.close()">
-        {{ data.buttonName1 }}
-    </button>
-    <button mat-button color="primary" class="close-btn" id="speechhistorybtn" (click)="submitResponse()">
+    <button mat-button color="primary" class="close-btn" id="speechhistorybtn" (click)="goToSpeechHistory()">
         {{ data.buttonName2 }}
     </button>
 </div>
