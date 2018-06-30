@@ -1,0 +1,17 @@
+<mat-tab-group id="appliction_tab" [selectedIndex]="selectedTab">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <a (click)="createSubmitSpeech()" routerLink="/submit-speech" routerLinkActive="active">Submit Speech</a>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <a (click)="createViewSpeech()" routerLink="/view-speech" routerLinkActive="active">View Speech</a>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <a (click)="createSpeechHistory" routerLink="/speech-history" routerLinkActive="active">Speech History</a>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>

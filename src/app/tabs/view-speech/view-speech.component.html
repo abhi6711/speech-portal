@@ -1,0 +1,66 @@
+<div class="container-fluid view-speech" *ngIf="showSpeech">
+    <div class="row">
+        <div class="col-md-12">
+            <label for="speechName">Speech Name:</label>
+            <mat-form-field class="name-label">
+                <input id="speechName" matInput [(ngModel)]="speechName" placeholder="Enter Speech Name" required>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <textarea class="form-control" id="exampleTextarea" rows="7" [(ngModel)]="speechText" placeholder="Enter your speech here"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <mat-form-field>
+                <input matInput [(ngModel)]="authorName" placeholder="Author Name" required>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <input matInput [(ngModel)]="keyWords" placeholder="Subject Area Keywords" required>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="date.value">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="true" #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button id="delete" class="submit-btn" (click)="deleteSpeech()" [disabled]="disabled" data-toggle="modal" data-target="#myModal"> Delete </button>
+        </div>
+        <div class="col-md-2">
+            <button id="submit" class="submit-btn" (click)="saveSpeech()" [disabled]="disabled"> Save </button>
+        </div>
+        <!-- <div class="col-md-2">
+            <button id="share" class="submit-btn" (click)="shareSpeech()" [disabled]="disabled"> Share </button>
+        </div> -->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Message</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete the speech?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="submitResponse(false)">Ok</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="submitResponse(true)">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<span *ngIf='noSpeechData' class='error view-speech'>No speech is found. Please select a speech from speech-history page.</span>

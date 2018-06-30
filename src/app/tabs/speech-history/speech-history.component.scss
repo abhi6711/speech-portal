@@ -1,0 +1,211 @@
+//colors
+$white: white;
+$jade: #505050;
+$quartz: #8985db;
+$pearl: #fafafa;
+$grey1: #333333;
+$ruby: #DB504A;
+$garnet: #FFA837;
+
+//fonts
+$font_0: Heebo;
+$font_1: serif;
+
+@mixin font_style($weight: normal, $color: $jade){
+	font-size: 16px !important;
+	line-height: 24px;
+	font-family: $font_0, $font_1;
+	font-weight: $weight !important;
+	color: $color !important;
+}
+
+::ng-deep .mat-tooltip {
+	font-size: 14px;
+}
+
+.type{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px;
+	margin: 8px;
+	margin-bottom: 0px;
+}
+
+.heading-text{
+	font-family: $font_0, $font_1;
+	font-weight: 300;
+	font-size: 32px;
+	color: $grey1;
+	letter-spacing: 0.3px;
+	line-height: 40px;
+}
+
+.speech-history {
+	@include font_style(normal, $jade);
+	overflow-x: auto;
+	overflow-y: visible;
+	margin: 0em 2em;
+	background-color: $white;
+}
+
+mat-input-container {
+	width: 90%;
+}
+
+::ng-deep .mat-form-field-underline {
+    width: 100%;
+}
+
+.messages {
+	@include font_style(normal, $jade);
+	font-size: 24px !important;
+	padding: 8px;
+	margin: 8px;
+	letter-spacing: 0.3px;
+  	line-height: 28.8px;
+}
+
+.loading {
+	color: $garnet;
+}
+
+.Job_name{
+	color:green
+}
+#serach{
+	border-top:0px;
+}
+
+:host /deep/ {
+	.mat-input-ripple{
+		background-color: $quartz;
+	}
+	.ng2-smart-pagination-nav {
+		text-align: center;
+		@include font_style(normal);
+	}
+	.pagination {
+		> li > a {
+			color: $quartz !important;
+		}
+		> .active > span {
+			background-color: $quartz;
+			border-color: $quartz;
+		}
+	}
+	table {
+		background-color: #fff;
+		border-collapse: collapse;
+		border: {
+			top: 1px solid #e9e9e9;
+			bottom: 1px solid #e9e9e9;
+		}
+		tr {
+			height: 50px;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+			th {
+				border: {
+					top: 0px;
+					left: 1px solid #e9e9e9;
+					right: 1px solid #e9e9e9;
+					bottom: 1px solid #e9e9e9;
+				}
+				cursor: pointer;
+				padding: 12px 16px !important;
+				width: 100px !important;
+				text-transform: Uppercase;
+				font-family: $font_0, $font_1;
+				font-weight: 400 !important;
+				font-size: 13px !important;
+				color: $quartz;
+				letter-spacing: 1.25px;
+				a {
+					color: $quartz !important;
+					&:hover {
+						text-decoration: none !important;
+					}
+				}
+			}
+			td {
+				ng2-smart-table-cell{
+					table-cell-view-mode{
+						div{
+							div{
+								max-width: 150px !important;
+								min-width: 50px !important;
+								overflow: hidden;
+								word-wrap: break-word;
+							}
+						}
+						div[ng-reflect-ng-switch='custom']{
+							text-align:center;
+						}
+					}
+				}
+				padding: 8px 16px !important;
+				width: 100px !important;
+				min-width: 100px !important;
+				font-family: $font_0, $font_1;
+				font-size: 13px !important;
+				color: #505050;
+				letter-spacing: 0;
+				.na-text{
+					@include font_style(normal, $quartz);
+					font-size: 12px !important;
+				}
+			}
+			&:nth-child(even) {
+				background-color: #FBFBFB;
+				td {
+					border: {
+					top: 0px;
+					bottom: 0px;
+					right: 1px solid #e9e9e9;
+					left: 1px solid #e9e9e9;
+					}
+					box-shadow: 0 0 1px 0 rgba(174, 174, 174, 0.50);
+				}
+			}
+			&:nth-child(odd) {
+				background-color: #FFFFFF;
+				td {
+					border: {
+					top: 0px;
+					bottom: 0px;
+					right: 1px solid #e9e9e9;
+					left: 1px solid #e9e9e9;
+					}
+				}
+			}
+		}
+	}
+	a.sort {
+		&.asc {
+			font-weight: 500 !important;
+		}
+		&.desc {
+			font-weight: 500 !important;
+		}
+	}
+}
+
+input {
+	@include font_style($font_1, $jade);
+	outline: 0;
+	width: 100%;
+	margin-bottom: 20px;
+	border-width: 0 0 1px 0;
+	border-color: rgba(0,0,0,.42);
+}
+input:focus {
+	border-color: #7570da;
+}
+::-webkit-input-placeholder{
+	color:rgba(0,0,0,.42);
+	font-size: 16px;
+}
+:focus::-webkit-input-placeholder{
+	color: #7570da;
+}

@@ -1,0 +1,53 @@
+
+//colors
+$quartz: #8985db;
+$white: #fff;
+
+//fonts
+$font_0: Heebo;
+
+@mixin basic_style {
+	font-family: $font_0;
+	font-weight: 500;	
+	font-size: 1.2em;
+	min-width: 100px !important;
+	max-width: 230px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: $white;
+	opacity: 1 !important;
+}
+
+.check {
+	background-color: $quartz;
+}
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+:host /deep/ {
+	mat-tab-header {
+		background-color: $quartz;
+	}
+	.mat-tab-label {
+		padding: 0px !important;
+		a {
+			@include basic_style;
+			padding: 10px 50px 12px 50px;
+		}
+		:active {			
+			@include basic_style;
+		}
+	}
+	.mat-ink-bar {
+		background-color: $white !important;
+	}
+	.mat-tab-label-active {
+		color: $white;
+		padding: 0px !important;
+		opacity: 1 !important;
+	}
+}

@@ -1,0 +1,54 @@
+//colors
+$quartz: #8985db;
+$pearl: #fafafa;
+
+//fonts
+$font_0: Heebo;
+$font_1: serif;
+
+.header {
+	background-color: $quartz;
+	color: $pearl;
+	padding: 5px 15px;
+}
+.text {
+	margin-top: 5px;
+}
+.title-text {
+	font-family: $font_0, $font_1;
+	font-weight: 300;
+	font-size: 34px;
+	color: $pearl;
+	letter-spacing: 0.3px;
+	line-height: 48px;
+}
+.logout {
+	float: right;
+	z-index: 1000;
+	padding: 0;
+}
+.normal {
+	font-family: $font_0;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	line-height: 24px;
+	padding: 8px 16px;
+	font-weight: normal;
+}
+.secondary {
+	color: $quartz;
+	background-color: $pearl;
+	border: 1px solid $quartz;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		color: #7570da;
+		border: 1px solid #7570da;
+		box-shadow: 1px 1px 4px 0 rgba(137,133,219,0.40);
+	}
+	&:active {
+		box-shadow: inset 1px 1px 4px 0 rgba(117,112,218,0.40);
+		color: rgba(137,133,219,0.7);;
+	}
+}

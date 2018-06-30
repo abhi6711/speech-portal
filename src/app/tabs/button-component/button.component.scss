@@ -1,0 +1,73 @@
+//colors
+$white: white;
+$jade: #505050;
+$quartz: #8985db;
+$pearl: #fafafa;
+$grey1: #333333;
+
+//fonts
+$font_0: Heebo;
+$font_1: serif;
+
+@mixin font_style($weight: normal, $color: $jade){
+	font-size: 16px !important;
+	line-height: 24px;
+	font-family: $font_0, $font_1;
+	font-weight: $weight !important;
+	color: $color !important;
+}
+
+.dwnld-file {
+    letter-spacing: 0.5px !important;
+    height: 30px !important;
+    width: 90px !important;
+    border: 1px solid $jade !important;
+}
+.secondary {
+    @include font_style(500, $quartz);
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    background-color: #fff !important;
+    border: 1px solid $quartz !important;
+    line-height: 0px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: #7570da !important;
+        border: 1px solid #7570da !important;
+        box-shadow: 1px 1px 4px 0 rgba(137,133,219,0.40) !important;
+        text-decoration: none;
+    }
+    &:active {
+        box-shadow: inset 1px 1px 4px 0 rgba(117,112,218,0.40) !important;
+        color: rgba(137,133,219,0.7) !important;
+        text-decoration: none;
+    }
+}
+.primary {
+    @include font_style(500, $pearl);
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    background-color: $quartz !important;
+    border: none !important;
+    line-height: 0px !important;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background: #5f59db !important;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 2px 2px 5px 0 rgba(137,133,219,0.60) !important;
+        text-decoration: none;
+    }
+    &:active {
+        color: rgba(255,255,255,0.7) !important;
+        background: #7570da !important;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: inset 2px 2px 5px 0 #5f59db !important;
+        text-decoration: none;
+    }
+}

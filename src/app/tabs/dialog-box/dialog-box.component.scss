@@ -1,0 +1,34 @@
+//fonts
+$font_0: Heebo;
+$font_1: serif;
+
+#heading{
+    font-size:20px;
+    margin: 0px 0px 15px 0px;
+    font-family: $font_0,$font_1;
+}
+
+p{
+    font-family: $font_0,$font_1;
+    font-size:16px; 
+}
+
+.message{
+    font-family: $font_0,$font_1;
+}
+
+.close-btn{
+    float:right;
+    font-family: $font_0,$font_1;    font-size:16px; 
+}
+
+::ng-deep .mat-dialog-container{
+    max-width: 55vw;
+    min-width: 22vw;
+    width: 100%;
+}
+
+.error{
+    color: #ea1313;
+    font-size: 18px;
+}

@@ -1,0 +1,8 @@
+<div class="speech-history">
+    <div class='messages'>
+        <span *ngIf='loaded == false' class='loading'>
+            <i class="zmdi zmdi-replay zmdi-hc-spin-reverse"></i>&ensp;Loading Table Data</span>
+    </div>
+    <input class="search" type="text" placeholder="Search by Speech Tile, Author Name, Date and Keywords..." (keyup)="onSearch(search.value)">
+    <ng2-smart-table [settings]="settings" [source]="source" *ngIf='loaded'></ng2-smart-table>
+</div>

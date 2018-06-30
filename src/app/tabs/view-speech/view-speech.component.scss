@@ -1,0 +1,67 @@
+//colors
+$white: white;
+$jade: #505050;
+$quartz: #8985db;
+$pearl: #fafafa;
+$grey1: #333333;
+$ruby: #DB504A;
+$garnet: #FFA837;
+
+//fonts
+$font_0: Heebo;
+$font_1: serif;
+
+@mixin font_style($weight: normal, $color: $jade){
+	font-size: 16px !important;
+	line-height: 20px;
+	font-family: $font_0, $font_1;
+	font-weight: $weight !important;
+	color: $color !important;
+}
+.view-speech {
+    margin: 25px 15px 15px 20px;
+}
+
+.form-control{
+    @include font_style(normal, $jade);
+    margin: 0px 0px 0px 0px;
+    width:51%;
+    border-radius: none;
+    &:focus {
+       border-color: $quartz
+    }
+}
+
+.btn-property{
+	width: 140px;
+	color: #fff;
+	height: 34px;
+	font-family: $font_0,$font_1;
+	font-size:16px;
+	margin: 15px 0px 0px 0px;
+	border: none;
+}
+
+.submit-btn{
+    @include font_style(normal, $pearl);
+	background-color:#8985db;
+    @extend .btn-property;
+}
+
+.name-label{
+	margin-left: 10px;
+}
+
+.error {
+    @include font_style(normal, $ruby);
+	color: $ruby;
+}
+
+.btn-default {
+	color: $quartz;
+	border-color: $quartz;
+	&:hover {
+		color: $quartz;
+		border-color: $quartz;
+	}
+}
