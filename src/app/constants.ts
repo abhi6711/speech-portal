@@ -10,7 +10,7 @@ export const AUTHORNAMEERRORMSG = 'Enter the author name';
 export const KEYWORDSERRORMSG = 'Enter the speech keywords';
 export const SPEECHTEXTERRORMSG = 'Enter the speech text';
 export const DATEERRORMSG = 'Enter the date';
-export const SPEECHNAMEERRORMSG = 'Enter the speech name';
+export const SPEECHNAMEERRORMSG = 'Enter the speech title';
 
 //speech keys 
 export const ID = 'id';

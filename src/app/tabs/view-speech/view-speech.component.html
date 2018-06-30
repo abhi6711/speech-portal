@@ -8,24 +8,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-lg-12 col-xs-12">
             <div class="form-group">
                 <textarea class="form-control" id="exampleTextarea" rows="7" [(ngModel)]="speechText" placeholder="Enter your speech here"></textarea>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 col-lg-3 col-xs-2">
             <mat-form-field>
                 <input matInput [(ngModel)]="authorName" placeholder="Author Name" required>
             </mat-form-field>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-lg-3 col-xs-2">
             <mat-form-field>
                 <input matInput [(ngModel)]="keyWords" placeholder="Subject Area Keywords" required>
             </mat-form-field>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-lg-3 col-xs-2">
             <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="date.value">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -34,10 +34,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 col-lg-3 col-xs-2">
             <button id="delete" class="submit-btn" [disabled]="disabled" data-toggle="modal" data-target="#myModal"> Delete </button>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-lg-3 col-xs-2">
             <button id="submit" class="submit-btn" (click)="saveSpeech()" [disabled]="disabled"> Save </button>
         </div>
     </div>
