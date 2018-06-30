@@ -11,7 +11,8 @@ import {
     MatButtonModule,
     MatTooltipModule,
     MatDatepickerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule
 } from '@angular/material';
 
 
@@ -25,7 +26,8 @@ import {
         MatButtonModule,
         MatTooltipModule,
         MatDatepickerModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatSelectModule
     ],
     exports: [
         MatNativeDateModule,
@@ -36,7 +38,8 @@ import {
         MatButtonModule,
         MatTooltipModule,
         MatDatepickerModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatSelectModule
     ],
     providers: [],
     bootstrap: []

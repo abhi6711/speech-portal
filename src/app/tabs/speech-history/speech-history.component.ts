@@ -20,6 +20,14 @@ export class SpeechHistoryComponent implements OnInit {
     speechData: any;
     source: LocalDataSource;
     loaded: boolean = false;
+    //Initial number of items to be shown per page
+    selectedPageSize = 5;
+    pageSizeOptions = [
+        { value: 5, viewValue: '5' },
+        { value: 10, viewValue: '10' },
+        { value: 20, viewValue: '20' },
+        { value: 50, viewValue: '50' }
+    ];
     settings = {
         columns: {
             id: {
@@ -64,7 +72,7 @@ export class SpeechHistoryComponent implements OnInit {
         },
         pager: {
             display: true,
-            perPage: 6
+            perPage: this.selectedPageSize
         }
     };
     data: object[];
@@ -85,9 +93,19 @@ export class SpeechHistoryComponent implements OnInit {
      * @return void
     */
     public getAllSpeechDetails(): void {
-       this.speechData = this.dataService.getSpeechData()
-       this.source = new LocalDataSource(this.speechData);
-       this.loaded = true;
+        this.speechData = this.dataService.getSpeechData()
+        this.source = new LocalDataSource(this.speechData);
+        this.loaded = true;
+    }
+
+    /**
+     * This function gets called when user changes the number of jobs to be displayed per page
+     * @param itemsPerPage: jobs to be shown on a page
+     * @returns void
+    */
+    public loadItems(itemsPerPage: number): void {
+        this.selectedPageSize = itemsPerPage;
+        this.source.setPaging(1, this.selectedPageSize, true);
     }
 
     /**

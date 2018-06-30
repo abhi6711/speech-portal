@@ -1,8 +1,30 @@
-<div class="speech-history">
-    <div class='messages'>
-        <span *ngIf='loaded == false' class='loading'>
-            <i class="zmdi zmdi-replay zmdi-hc-spin-reverse"></i>&ensp;Loading Table Data</span>
+<div class="container-fluid speech-history">
+    <div class="row">
+        <div class="col-md-8">
+            <div class='messages'>
+                <span *ngIf='loaded == false' class='loading'>
+
+                    <i class="zmdi zmdi-replay zmdi-hc-spin-reverse"></i>&ensp;Loading Table Data
+                </span>
+                <input class="search" type="text" placeholder="Search by Speech Tile, Author Name, Date and Keywords..." (keyup)="onSearch(search.value)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <span class="items">
+                <label>Items Per Page</label>
+                <mat-form-field class="select-field">
+                    <mat-select [(value)]="selectedPageSize">
+                        <mat-option *ngFor="let size of pageSizeOptions" (click)="loadItems(size.value)" [value]="size.value">
+                            {{ size.viewValue }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </span>
+        </div>
     </div>
-    <input class="search" type="text" placeholder="Search by Speech Tile, Author Name, Date and Keywords..." (keyup)="onSearch(search.value)">
-    <ng2-smart-table [settings]="settings" [source]="source" *ngIf='loaded'></ng2-smart-table>
+    <div class="row">
+        <div class="col-md-12">
+            <ng2-smart-table [settings]="settings" [source]="source" *ngIf='loaded'></ng2-smart-table>
+        </div>
+    </div>
 </div>
