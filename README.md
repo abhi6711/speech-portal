@@ -15,12 +15,26 @@ Node should be installed on your system. Node version should be (>=v8.10.0)
 3. Install angular cli:
     
         npm install @angular/cli@6.0.8
-    
+
 4. Install npm dependencies
    
         npm install
+
+5. Install Angular material and cdk:
+
+        npm install @angular/material@6.3.0
+        npm install @angular/cdk@6.3.0
+
+6. Install Angular animations:
+
+        npm install @angular/animations@6.0.3
     
-5. Start server
+7. Install rxjs dependencies:
+
+        npm install rxjs@6.2.1
+        npm install rxjs-compat@6.2.1
+    
+8. Start server
 
         npm start
 
