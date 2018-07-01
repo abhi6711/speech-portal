@@ -12,7 +12,7 @@ import * as constants from '../constants';
     templateUrl: './tabs.component.html',
     styleUrls: ['./tabs.component.scss']
 })
-export class TabsComponent {
+export class TabsComponent implements OnInit {
     selectedTab: number;
 
     constructor(private router: Router, private subscriber: Subscriber) {
@@ -20,17 +20,15 @@ export class TabsComponent {
             tab => {
                 this.selectedTab = tab;
             }
-        )
+        );
     }
     ngOnInit() {
         if (location.href === constants.HTTP + location.host + constants.BASE_URL ||
             location.href === constants.HTTP + location.host + constants.SUBMIT_SPEECH) {
             this.selectedTab = 0;
-        }
-        else if (location.href === constants.HTTP + location.host + constants.VIEW_SPEECH_URL) {
+        } else if (location.href === constants.HTTP + location.host + constants.VIEW_SPEECH_URL) {
             this.selectedTab = 1;
-        }
-        else {
+        } else {
             this.selectedTab = 2;
         }
     }
