@@ -1,5 +1,5 @@
 # SpeechPortal
-
+In this project User can Submit, View, Search, Edit, Share and delete their respective speeches whenever they want to. This project only has frontend as of now no backend interaction is there.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 # Prerequesite
@@ -61,3 +61,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+# ScreenShots
+
+1. Submit speech page
+![Alt text](/images/submit-speech.png)
+
+2. Speech history page
+![Alt text](/images/speech-history.png)
+
+3. View speech page (when no speech is selected for view)
+![Alt text](/images/view-speech.png)
+
+4. View speech page (when a speech is selected)
+![Alt text](/images/share-speech.png)
+
